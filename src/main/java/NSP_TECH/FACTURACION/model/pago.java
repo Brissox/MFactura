@@ -32,6 +32,7 @@ public class pago {
     private Date fecha_pago;
     private String estadoPago;
     private String tipo;
+    private String metodo;
     private int iva;
     private int Descuentos;
     private int total;

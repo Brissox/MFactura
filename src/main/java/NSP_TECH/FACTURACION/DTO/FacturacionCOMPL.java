@@ -44,6 +44,7 @@ public class FacturacionCOMPL {
         usuarios u = pd.getUsuarios();
 
     this.fecha_pago = p.getFecha_pago();
+    this.metodo_pago = p.getMetodo();
     this.tipo = p.getTipo();
     this.iva = p.getIva();
     this.descuentos = p.getDescuentos();
