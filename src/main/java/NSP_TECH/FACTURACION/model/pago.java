@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@Table(name="PAGO")
+@Table(name="PAGOS")
 @AllArgsConstructor
 @NoArgsConstructor
 
@@ -30,7 +30,7 @@ public class pago {
     private pedido pedidos;
 
     private Date fecha_pago;
-    private String estadoPago;
+    private String estado_Pago;
     private String tipo;
     private String metodo;
     private int iva;

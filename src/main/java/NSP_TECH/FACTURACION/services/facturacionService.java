@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Service;
 
 import NSP_TECH.FACTURACION.DTO.FacturacionCOMPL;
-import NSP_TECH.FACTURACION.model.facturacion;
 import NSP_TECH.FACTURACION.repository.FacturacionRepository;
 import jakarta.transaction.Transactional;
 
@@ -27,8 +26,11 @@ public class facturacionService {
             .collect(Collectors.toList());
     }
 
-    public facturacion BuscarUnaFactura(Long ID_FACTURACION){
-        return frepository.findById(ID_FACTURACION).get();
-
+    public FacturacionCOMPL BuscarUnaFactura(Long ID_FACTURACION){
+         return frepository.findById(ID_FACTURACION)
+         .map(FacturacionCOMPL::new)
+            .orElseThrow(() -> new RuntimeException("Factura no encontrada con ID: " + ID_FACTURACION));
     }
+
+   
 }

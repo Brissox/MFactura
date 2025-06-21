@@ -1,7 +1,5 @@
 package NSP_TECH.FACTURACION.model;
 
-import java.util.Date;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -26,13 +24,6 @@ public class facturacion {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="ID_FACTURACION")
     private Long ID_FACTURACION;
-
-    @Column(name="NUMERO_DOCUMENTO")
-    private int NUMERO_DOCUMENTO;
-
-    @Column(name="FECHA_EMISION")
-    private Date FECHA_EMISION;
-
 
     @OneToOne
     @JoinColumn(name="id_pago")

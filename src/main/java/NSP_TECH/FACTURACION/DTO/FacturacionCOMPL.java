@@ -6,6 +6,7 @@ import NSP_TECH.FACTURACION.model.facturacion;
 import NSP_TECH.FACTURACION.model.pago;
 import NSP_TECH.FACTURACION.model.pedido;
 import NSP_TECH.FACTURACION.model.usuarios;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,29 +16,41 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class FacturacionCOMPL {
-
+    @Schema(description="aaaaa")
     private Long ID_FACTURACION;
-    private int NUMERO_DOCUMENTO;
-    private Date FECHA_EMISION;
+    @Schema(description="aaaaa")
     private Date fecha_pago;
+    @Schema(description="aaaaa")
     private String tipo;
+    @Schema(description="aaaaa")
     private int iva;
+    @Schema(description="aaaaa")
     private int descuentos;
+    @Schema(description="aaaaa")
     private int total;
+    @Schema(description="aaaaa")
     private Long id_Pedido;
+    @Schema(description="aaaaa")
     private Long id_pago;
+    @Schema(description="aaaaa")
     private int subtotal;
+    @Schema(description="aaaaa")
     private String metodo_pago;
+    @Schema(description="aaaaa")
     private String nombre;
+    @Schema(description="aaaaa")
     private String apellido_paterno;
+    @Schema(description="aaaaa")
     private String correo;
+    @Schema(description="aaaaa")
     private Long id_usuario;
+    @Schema(description="aaaaa")
+    private String estado_Pago;
+    
 
     public FacturacionCOMPL(facturacion facturacion) {
     
     this.ID_FACTURACION = facturacion.getID_FACTURACION();
-    this.NUMERO_DOCUMENTO = facturacion.getNUMERO_DOCUMENTO();
-    this.FECHA_EMISION = facturacion.getFECHA_EMISION();
 
         pago p = facturacion.getPagos();
         pedido pd = p.getPedidos();
@@ -57,6 +70,7 @@ public class FacturacionCOMPL {
     this.apellido_paterno =u.getApellido_paterno();
     this.correo = u.getCorreo();
     this.id_usuario = u.getId_usuario();
+    this.estado_Pago=p.getEstado_Pago();
     
     }
 

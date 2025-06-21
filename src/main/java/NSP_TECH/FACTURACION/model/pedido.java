@@ -21,7 +21,6 @@ import lombok.NoArgsConstructor;
 public class pedido {
 
     @Id
-    
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_Pedido;
 
