@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 
 public class FacturacionCOMPL {
     @Schema(description="aaaaa")
-    private Long ID_FACTURACION;
+    private Long id_facturacion;
     @Schema(description="aaaaa")
     private Date fecha_pago;
     @Schema(description="aaaaa")
@@ -50,7 +50,7 @@ public class FacturacionCOMPL {
 
     public FacturacionCOMPL(facturacion facturacion) {
     
-    this.ID_FACTURACION = facturacion.getID_FACTURACION();
+    this.id_facturacion = facturacion.getId_facturacion();
 
         pago p = facturacion.getPagos();
         pedido pd = p.getPedidos();

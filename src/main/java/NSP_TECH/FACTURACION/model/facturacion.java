@@ -23,7 +23,7 @@ public class facturacion {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="ID_FACTURACION")
-    private Long ID_FACTURACION;
+    private Long id_facturacion;
 
     @OneToOne
     @JoinColumn(name="id_pago")

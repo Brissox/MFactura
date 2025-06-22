@@ -16,7 +16,7 @@ public class facturacionModelAssambler implements RepresentationModelAssembler<F
     public EntityModel<FacturacionCOMPL> toModel(FacturacionCOMPL facturaBuscada) {
         return EntityModel.of(
             facturaBuscada,
-            linkTo(methodOn(FacturacionController.class).BuscarFactura(facturaBuscada.getID_FACTURACION())).withRel("LINKS"),
+            linkTo(methodOn(FacturacionController.class).BuscarFactura(facturaBuscada.getId_facturacion())).withRel("LINKS"),
             linkTo(methodOn(FacturacionController.class).listaAF()).withRel("todas-los-productos")
         );
 

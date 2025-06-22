@@ -30,6 +30,6 @@ public class pedido {
 
     
     private int subtotal;
-    private String MetodoPago;
+    private String metodoPago;
 
 }
