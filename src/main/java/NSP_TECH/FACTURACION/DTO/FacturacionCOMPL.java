@@ -16,35 +16,35 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class FacturacionCOMPL {
-    @Schema(description="aaaaa")
+    @Schema(description="identificador/numero unico de la factura o boleta",example="1")
     private Long id_facturacion;
-    @Schema(description="aaaaa")
+    @Schema(description="fecha que se realizo el pago del pedido", example="")
     private Date fecha_pago;
-    @Schema(description="aaaaa")
+    @Schema(description="tipo de venta", example="boleta o factura")
     private String tipo;
-    @Schema(description="aaaaa")
+    @Schema(description="impuesto sobre el valo anadido",example="111" )
     private int iva;
-    @Schema(description="aaaaa")
+    @Schema(description="rebaja al precio del producto", example="1231")
     private int descuentos;
-    @Schema(description="aaaaa")
+    @Schema(description="total a pagar",example="12312")
     private int total;
-    @Schema(description="aaaaa")
+    @Schema(description="identificador del pedido a pagar", example="1")
     private Long id_Pedido;
-    @Schema(description="aaaaa")
+    @Schema(description="identificador del pago", example="123")
     private Long id_pago;
-    @Schema(description="aaaaa")
+    @Schema(description="suma parcial", example="112")
     private int subtotal;
-    @Schema(description="aaaaa")
+    @Schema(description="metodo de pago a utilizar", example="debido/credido/efectivo")
     private String metodo_pago;
-    @Schema(description="aaaaa")
+    @Schema(description="nombre del usuario", example="Bastian")
     private String nombre;
-    @Schema(description="aaaaa")
+    @Schema(description="apellido del usuario", example="Rojas")
     private String apellido_paterno;
-    @Schema(description="aaaaa")
+    @Schema(description="correo asociado al usuario", example="aaaa222@xxxx.xx")
     private String correo;
-    @Schema(description="aaaaa")
+    @Schema(description="identificador del usuario", example="1")
     private Long id_usuario;
-    @Schema(description="aaaaa")
+    @Schema(description="estado del pago ", example="aprobado/rechazado")
     private String estado_Pago;
     
 
