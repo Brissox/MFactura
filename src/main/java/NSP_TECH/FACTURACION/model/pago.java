@@ -1,6 +1,7 @@
 package NSP_TECH.FACTURACION.model;
 
-import java.util.Date;
+import java.time.LocalDateTime;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,7 +30,7 @@ public class pago {
     @JoinColumn(name="id_pedido")
     private pedido pedidos;
 
-    private Date fecha_pago;
+    private LocalDateTime fecha_pago;
     private String estado_Pago;
     private String tipo;
     private String metodo;

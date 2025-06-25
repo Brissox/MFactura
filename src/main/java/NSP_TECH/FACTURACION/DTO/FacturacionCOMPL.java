@@ -1,6 +1,7 @@
 package NSP_TECH.FACTURACION.DTO;
 
-import java.util.Date;
+import java.time.LocalDateTime;
+
 
 import NSP_TECH.FACTURACION.model.facturacion;
 import NSP_TECH.FACTURACION.model.pago;
@@ -18,8 +19,8 @@ import lombok.NoArgsConstructor;
 public class FacturacionCOMPL {
     @Schema(description="identificador/numero unico de la factura o boleta",example="1")
     private Long id_facturacion;
-    @Schema(description="fecha que se realizo el pago del pedido", example="")
-    private Date fecha_pago;
+    @Schema(description="fecha que se realizo el pago del pedido", example="2025-06-24T15:30:00")
+    private LocalDateTime fecha_pago;
     @Schema(description="tipo de venta", example="boleta o factura")
     private String tipo;
     @Schema(description="impuesto sobre el valo anadido",example="111" )
