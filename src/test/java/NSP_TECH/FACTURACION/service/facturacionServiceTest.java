@@ -97,6 +97,42 @@ public class facturacionServiceTest {
     assertEquals(11L,factbuscar.getId_facturacion());
     verify(factrepository, times(1)).findById(11L);
 
+    }
+    
+        @Test
+    public void testEditarResena(){
+
+        resenas reseO = new resenas();
+        reseO.setId_resena(11L);
+        reseO.setCalificacion(1);
+        reseO.setComentario("Malo");
+
+        resenas resE = new resenas();
+        resE.setId_resena(11L);
+        resE.setCalificacion(4);
+        resE.setComentario("Bueno");
+
+        when(resenarepository.save(any(resenas.class))).thenReturn(resE);
+        when(resenarepository.existsById(11L)).thenReturn(true);
+        resenas resultado = resenaservices.GuardarResenas(resE);
+
+        assertNotNull(resultado);
+        assertEquals(11L, resultado.getId_resena());
+        assertEquals(4, resultado.getCalificacion());
+        assertEquals("Bueno", resultado.getComentario());
+
+        verify(resenarepository, times(1)).save(resE);
+    }
+
+    @Test
+    public void testEliminarResena(){
+        Long id = 11L;
+        doNothing().when(resenarepository).deleteById(id);
+
+        resenaservices.EliminarResena(11L);
+
+        verify(resenarepository, times(1)).deleteById(id);
+
     }*/
 
 
